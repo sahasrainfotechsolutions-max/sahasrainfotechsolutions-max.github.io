@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahasra Infotech Solutions | Intelligent Solutions For Smarter Tomorrow</title>
+    <meta name="description" content="Sahasra Infotech Solutions is an IT services company delivering websites, web apps, automation, CRM, video content and POS solutions for modern businesses." />
+
+    <!-- Favicon (icon only – hex S) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Scroll reveal animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 500ms ease-out,
+        transform 500ms ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        :root {
+            --primary: #4f46e5;
+            --primary-soft: #e0e7ff;
+            --accent: #f97316;
+            --gold: #facc6b;
+            --gold-deep: #fbbf24;
+            --bg: #020617;
+            --bg-soft: #020617;
+            --card-bg: #020617;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border-subtle: #1f2937;
+            --radius-lg: 1.5rem;
+            --radius-md: 1rem;
+            --shadow-soft: 0 24px 55px rgba(0, 0, 0, 0.85);
+            --transition-fast: 180ms ease-out;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(251, 191, 36, 0.09), transparent 55%),
+                radial-gradient(circle at bottom, rgba(37, 99, 235, 0.16), #020617 60%);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .page {
+            min-height: 100vh;
+        }
+
+        .container {
+            width: min(1120px, 100% - 2.6rem);
+            margin: 0 auto;
+        }
+
+        /* NAVBAR */
+        /* ========== CLEAN & COMPACT NAVBAR ========== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(16px);
+    background: rgba(2, 6, 23, 0.88);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+/* Overall nav container */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0; /* compact height */
+    gap: 1rem;
+}
+
+/* Logo block */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.brand-logo {
+    height: 34px;       /* smaller logo = nicer navbar */
+    width: auto;
+}
+
+.brand-text-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.brand-text-sub {
+    font-size: 0.68rem;
+    opacity: 0.75;
+}
+
+/* Center navigation links */
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;       /* perfect spacing */
+    font-size: 0.9rem;
+}
+
+/* Social icons + CTA on right */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+/* Round social icons */
+.nav-social {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.nav-social a {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    color: #e5e7eb;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    background: rgba(15, 23, 42, 0.8);
+}
+
+/* Right-side yellow CTA button */
+.nav-cta {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: linear-gradient(to right, #facc15, #f97316);
+    color: #111827;
+    box-shadow: 0 6px 22px rgba(250, 204, 21, 0.35);
+}
+
+/* Hover underline for menu */
+nav a {
+    color: #cbd5e1;
+    position: relative;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #facc15, #f97316);
+    transition: 0.2s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+        /* Mobile nav button */
+        .nav-toggle {
+            display: none;
+            border: none;
+            background: none;
+            padding: 0.4rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+        }
+
+        .nav-toggle-line {
+            width: 18px;
+            height: 2px;
+            background: #e5e7eb;
+            border-radius: 999px;
+            position: relative;
+        }
+
+        .nav-toggle-line::before,
+        .nav-toggle-line::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: #e5e7eb;
+            border-radius: 999px;
+            left: 0;
+        }
+
+        .nav-toggle-line::before {
+            top: -5px;
+        }
+
+        .nav-toggle-line::after {
+            top: 5px;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 4.3rem 0 4rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.92);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .pill-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.2);
+        }
+
+        .pill-strong {
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+
+        h1.hero-title {
+            font-size: clamp(2.3rem, 3.2vw + 1.5rem, 3.4rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-highlight {
+            background-image: linear-gradient(to right, var(--gold), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            max-width: 38rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1.3rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            background: radial-gradient(circle at 10% 0%, #facc15, #f97316 35%, #facc15 110%);
+            color: #111827;
+            box-shadow: 0 18px 40px rgba(250, 204, 21, 0.45);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 22px 55px rgba(250, 204, 21, 0.6);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.75rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            cursor: pointer;
+            background: rgba(15, 23, 42, 0.9);
+            color: #e5e7eb;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .hero-meta strong {
+            color: #e5e7eb;
+            font-weight: 500;
+        }
+
+        .badge-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        /* Hero Right – Launch Card */
+        .hero-card {
+            background: radial-gradient(circle at top left, rgba(250, 204, 21, 0.22), transparent 55%), #020617;
+            border-radius: 1.7rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            padding: 1.5rem 1.5rem 1.7rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card-tag {
+            font-size: 0.75rem;
+            color: #bfdbfe;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            margin-bottom: 0.45rem;
+        }
+
+        .hero-card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-card-sub {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1.1rem;
+        }
+
+        .launch-row {
+            display: flex;
+            gap: 0.9rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .launch-pill {
+            flex: 1;
+            padding: 0.7rem 0.8rem;
+            border-radius: 1rem;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            font-size: 0.8rem;
+        }
+
+        .launch-label {
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .launch-value {
+            font-weight: 500;
+        }
+
+        .launch-em {
+            font-size: 0.78rem;
+            color: #bbf7d0;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .launch-cta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .launch-cta strong {
+            color: #e5e7eb;
+        }
+
+        .hero-card-badge {
+            padding: 0.4rem 0.7rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            background: linear-gradient(135deg, #22c55e, #a3e635);
+            color: #022c22;
+        }
+
+        .hero-orbit {
+            position: absolute;
+            inset: -40%;
+            opacity: 0.22;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(248, 250, 252, 0.12), transparent 55%),
+                radial-gradient(circle at 85% 15%, rgba(251, 146, 60, 0.12), transparent 60%),
+                radial-gradient(circle at 50% 100%, rgba(96, 165, 250, 0.2), transparent 55%);
+        }
+
+        /* SECTION GENERIC – premium headings */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-heading-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 1rem;
+            margin-bottom: 2.6rem;
+            flex-wrap: wrap;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-heading {
+            position: relative;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.25;
+            letter-spacing: -0.03em;
+            color: #f9fafb;
+        }
+
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.6rem;
+            width: 64px;
+            height: 3px;
+            border-radius: 999px;
+            background: linear-gradient(to right, #facc15, #f97316);
+        }
+
+        .section-tagline {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+            max-width: 22rem;
+        }
+
+        /* ABOUT */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 2.3rem;
+        }
+
+        .about-text p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.8rem;
+            margin-top: 1.3rem;
+        }
+
+        .stat-card {
+            padding: 0.8rem 0.9rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            background: rgba(15, 23, 42, 0.96);
+            font-size: 0.78rem;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gold-deep);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+        }
+
+        .about-card {
+            border-radius: 1.5rem;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 55%), #020617;
+            padding: 1.4rem 1.5rem;
+            box-shadow: var(--shadow-soft);
+            font-size: 0.86rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .about-chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .chip {
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        .director {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 0%, #facc15, #fb7185);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .director-info {
+            font-size: 0.8rem;
+        }
+
+        .director-name {
+            font-weight: 500;
+        }
+
+        .director-role {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* SERVICES & PORTFOLIO CARDS */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.4rem;
+        }
+
+        .card {
+            position: relative;
+            border-radius: 1.4rem;
+            padding: 1.3rem 1.2rem 1.4rem;
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            background: rgba(15, 23, 42, 0.96);
+            box-shadow: 0 16px 35px rgba(15, 23, 42, 0.9);
+            font-size: 0.84rem;
+            overflow: hidden;
+            transition:
+        transform 160ms ease-out,
+        box-shadow 160ms ease-out;
+        }
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.95);
+}
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: -30%;
+            opacity: 0;
+            background: radial-gradient(circle at 0 0, rgba(250, 204, 21, 0.32), transparent 60%);
+            transition: opacity 200ms ease-out;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-sub {
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+        }
+
+        .card-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card-list li {
+            display: flex;
+            gap: 0.4rem;
+            align-items: flex-start;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-bullet {
+            width: 4px;
+            height: 4px;
+            border-radius: 999px;
+            background: var(--accent);
+            margin-top: 0.4rem;
+        }
+
+        /* LAUNCH SECTION */
+        .launch-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 2.1rem;
+        }
+
+        .launch-note {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .launch-list {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            list-style: none;
+        }
+
+        .launch-list li {
+            margin-bottom: 0.45rem;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .launch-badge {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(251, 146, 60, 0.12);
+            border: 1px solid rgba(248, 171, 88, 0.7);
+            color: #fed7aa;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .timer-row {
+            display: flex;
+            gap: 0.7rem;
+            flex-wrap: wrap;
+        }
+
+        .timer-pill {
+            flex: 0 0 auto;
+            min-width: 70px;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.9rem;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            text-align: center;
+        }
+
+        .timer-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .timer-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .launch-stream-card {
+            border-radius: 1.4rem;
+            border: 1px dashed rgba(148, 163, 184, 0.55);
+            background: rgba(15, 23, 42, 0.95);
+            padding: 1.1rem 1.2rem;
+            font-size: 0.83rem;
+        }
+
+        .launch-stream-chip {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.13em;
+            color: #a5b4fc;
+            margin-bottom: 0.2rem;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+            gap: 2rem;
+        }
+
+        form {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 0.15rem;
+            display: inline-block;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 0.65rem 0.7rem;
+            border-radius: 0.8rem;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background: rgba(15, 23, 42, 0.95);
+            color: #e5e7eb;
+            font-size: 0.85rem;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.5);
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .contact-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .contact-meta p {
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-list {
+            list-style: none;
+            font-size: 0.85rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-label {
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+
+        .whatsapp-note {
+            margin-top: 0.9rem;
+            font-size: 0.8rem;
+            color: #bbf7d0;
+        }
+
+        /* Dark card behind contact section */
+        #contact {
+            background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617 65%);
+        }
+
+        .contact-inner {
+            margin-top: 0.5rem;
+            padding: 1.6rem 1.5rem;
+            border-radius: 1.5rem;
+            background: rgba(15, 23, 42, 0.96);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .contact-meta,
+        .contact-meta p,
+        .contact-list,
+        .contact-list a {
+            color: var(--text-main);
+        }
+
+        /* WhatsApp button under details */
+        .whatsapp-contact-btn {
+            margin-top: 0.8rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.55rem 1.1rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #022c22;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.45);
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 30px rgba(22, 163, 74, 0.6);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #020617;
+            border-top: 1px solid rgba(148, 163, 184, 0.35);
+            padding: 1.4rem 0 1.6rem;
+            font-size: 0.78rem;
+            color: #e5e7eb;
+        }
+
+        .footer-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) auto auto;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .footer-links a {
+            font-size: 0.78rem;
+            color: #cbd5f5;
+        }
+
+        .footer-links a:hover {
+            color: #facc15;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 980px) {
+            .footer-row {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .footer-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 900px) {
+    /* Slightly narrower content on tablets */
+    .container {
+        width: min(100% - 2rem, 960px);
+    }
+
+    /* Stack hero and center text */
+    .hero {
+        padding: 3.1rem 0 3rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.3rem;
+        text-align: center;
+    }
+
+    .hero-card {
+        order: -1;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .hero-cta-row {
+        justify-content: center;
+    }
+
+    .hero-meta {
+        justify-content: center;
+    }
+
+    /* One-column sections on tablet */
+    .about-grid,
+    .launch-layout,
+    .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    /* Cards: 2 per row on tablet */
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+       @media (max-width: 720px) {
+    /* Mobile nav dropdown */
+    nav ul {
+        position: absolute;
+        top: 56px;
+        right: 1.25rem;
+        left: 1.25rem;
+        padding: 0.9rem 0.9rem 0.8rem;
+        border-radius: 1.1rem;
+        border: 1px solid rgba(148, 163, 184, 0.55);
+        background: rgba(15, 23, 42, 0.98);
+        box-shadow: var(--shadow-soft);
+        flex-direction: column;
+        gap: 0.8rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity 150ms ease-out, transform 150ms ease-out;
+    }
+
+    nav ul.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    /* Hide big CTA on very small screens, keep logo + menu */
+    .nav-right {
+        gap: 0.4rem;
+    }
+    .nav-cta {
+        display: none;
+    }
+
+    /* Hero adjustments for phones */
+    .hero {
+        padding: 2.6rem 0 2.6rem;
+    }
+
+    h1.hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-meta {
+        gap: 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    /* Sections: a bit tighter on phones */
+    section {
+        padding: 3rem 0;
+    }
+
+    .section-heading {
+        font-size: 1.7rem;
+    }
+
+    .section-heading-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .section-tagline {
+        max-width: 100%;
+        font-size: 0.82rem;
+    }
+
+    /* Cards: 1 per row on phone */
+    .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .about-highlights {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Contact card spacing */
+    .contact-inner {
+        padding: 1.3rem 1.1rem;
+    }
+}
+
+        /* === BLUE + GOLD THEME TWEAKS & STRONGER HEADINGS (OVERRIDES) === */
+
+/* More blue in the background */
+body {
+    background:
+        radial-gradient(circle at top, rgba(37, 99, 235, 0.22), transparent 55%),
+        radial-gradient(circle at bottom, rgba(15, 23, 42, 1), #020617 60%);
+}
+
+/* Slight blue glow behind hero area */
+.hero {
+    padding: 4.3rem 0 4rem;
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.30), transparent 60%),
+        transparent;
+}
+
+/* Hero main heading = white, highlight = gold/orange */
+h1.hero-title {
+    color: #e5e7eb;
+}
+
+.hero-highlight {
+    background-image: linear-gradient(to right, #facc15, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Section headings in blue + gold style */
+.section-heading {
+    position: relative;
+    font-size: 2.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: #e5e7eb; /* main text */
+}
+
+/* Gold bar under headings (already exists, but we make sure) */
+.section-heading::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    width: 68px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(to right, #facc15, #f97316);
+}
+
+/* Labels slightly brighter */
+.section-label {
+    color: #a5b4fc;
+}
+
+/* Buttons a bit more blue */
+.btn-ghost {
+    background: rgba(15, 23, 42, 0.96);
+    border-color: rgba(148, 163, 184, 0.8);
+}
+
+.btn-primary {
+    background: radial-gradient(circle at 10% 0%, #3b82f6, #f97316 40%, #facc15 110%);
+}
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- HEADER / NAV -->
+    <header>
+        <div class="container nav">
+            <a href="#home" class="brand" style="text-decoration: none; color: inherit;">
+                <img src="logo-full.png" alt="Sahasra Infotech Solutions" class="brand-logo">
+                <div class="brand-text-block">
+                    <div class="brand-text-title">Sahasra Infotech Solutions</div>
+                    <div class="brand-text-sub">Intelligent Solutions For Smarter Tomorrow</div>
+               
+            </div>
+ </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <div class="nav-toggle-line"></div>
+            </button>
+
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Who We Are</a></li>
+                    <li><a href="#services">IT Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#launch">Launch</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="nav-social">
+                    <!-- Replace with real links -->
+                    <a href="https://www.youtube.com/channel/UCTrpCpQ_5zdzI4417DPgeAg" target="_blank" rel="noopener">YT</a>
+                    <a href="https://www.instagram.com/sahasrainfotechsolutions/" target="_blank" rel="noopener">IG</a>
+                    <a href="https://www.facebook.com/profile.php?id=61584594786944" target="_blank" rel="noopener">FB</a>
+                    <a href="https://www.linkedin.com/company/110230578/admin/dashboard/" target="_blank" rel="noopener">IN</a>
+                </div>
+                <a href="#contact" class="nav-cta">
+                    Request IT Proposal <span>↗</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <div class="pill">
+                        <span class="pill-dot"></span>
+                        <span class="pill-strong">Full-stack IT partner</span>
+                        <span>From idea to deployment & support</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="hero-highlight">Intelligent Solutions</span><br />
+                        for a Smarter Tomorrow.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Sahasra Infotech Solutions is an IT services company focused on
+                        <strong>web development, custom web apps, automation and digital experiences</strong>.
+                        We also provide creative, video and POS solutions that help your business run and grow.
+                    </p>
+
+                    <div class="hero-cta-row">
+                        <a href="#contact" class="btn-primary">
+                            Request an IT Project Proposal <span>→</span>
+                        </a>
+                        <a href="#services" class="btn-ghost">
+                            View Full Service Stack
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span><span class="badge-dot"></span> <strong>Project-first mindset</strong> – clear scope, timelines & delivery</span>
+                        <span><span class="badge-dot"></span> Web, CRM, automation + supporting media & POS solutions</span>
+                    </div>
+                </div>
+
+                <!-- Launch Card -->
+                <aside class="hero-card">
+                    <div class="hero-orbit"></div>
+                    <div style="position: relative;">
+                        <div class="hero-card-tag">Official Online Launch</div>
+                        <div class="hero-card-title">Sahasra Infotech Solutions is going live</div>
+                        <div class="hero-card-sub">
+                            Join our digital launch and see how we design IT solutions that are practical,
+                            scalable and business-friendly.
+                        </div>
+
+                        <div class="launch-row">
+                            <div class="launch-pill">
+                                <div class="launch-label">Date</div>
+                                <div class="launch-value">12 • 12 • 2025</div>
+                            </div>
+                            <div class="launch-pill">
+                                <div class="launch-label">Time</div>
+                                <div class="launch-value">12:12 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="launch-em">
+                            Live showcase of websites, custom apps, automation flows and supporting services.
+                        </div>
+
+                        <div class="hero-card-footer">
+                            <div class="launch-cta">
+                                Streaming links will be shared via<br />
+                                <strong>WhatsApp broadcast & social media</strong>.
+                            </div>
+                            <div class="hero-card-badge">Launching Soon</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="section-label">Who we are</div>
+                <div class="section-heading-row">
+                    <h2 class="section-heading">Your project-focused IT partner</h2>
+                    <p class="section-tagline">
+                        Core business is IT services and projects. Creative, video and POS solutions support your growth.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Sahasra Infotech Solutions is an IT services company based in Siddipet, helping
+                            businesses build <strong>websites, custom web applications, CRM and automation workflows</strong>.
+                            Our main focus is on delivering <strong>clear, well-managed projects</strong> that solve real business problems.
+                        </p>
+                        <p>
+                            Along with IT projects, we offer revenue-supporting services like <strong>video editing, promos,
+                            branding and POS software</strong>. This allows our clients to get everything they need in one place –
+                            from platform to content.
+                        </p>
+                        <p>
+                            Whether you’re a startup, established business or agency looking for a reliable implementation partner,
+                            we help you go from concept to launch with predictable delivery.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="stat-card">
+                                <div class="stat-value">IT-first</div>
+                                <div class="stat-label">Core focus on web, apps & automation projects</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">End-to-end</div>
+                                <div class="stat-label">From planning & design to deployment & support</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">One team</div>
+                                <div class="stat-label">Tech, content & tools under one roof</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+                                Leadership
+                            </div>
+                            <div class="director">
+                                <div class="avatar">KR</div>
+                                <div class="director-info">
+                                    <div class="director-name">K. Ramesh</div>
+                                    <div class="director-role">Director, Sahasra Infotech Solutions</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            “Our vision is simple – combine strong IT capabilities with practical business understanding.
+                            We want every client to feel that their technology is an asset, not a headache.”
+                        </p>
+
+                        <div class="about-chip-row">
+                            <span class="chip">Custom web development</span>
+                            <span class="chip">Business websites & portals</span>
+                            <span class="chip">Automation & CRM workflows</span>
+                            <span class="chip">Creative & promo content</span>
+                            <span class="chip">POS & business tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services">
+            <div class="container">
+                <div class="section-label">Services</div>
+                <div class="section-heading-row">
+                    <h2 class="section-heading">IT services at the core, growth services around it</h2>
+                    <p class="section-tagline">
+                        Our primary work is IT projects. Design, video and POS services help you launch and scale.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Core IT – Websites & Web Apps -->
+                    <article class="card">
+                        <h3 class="card-title">Websites & Web Applications</h3>
+                        <p class="card-sub">
+                            Project-focused development for modern business websites and custom web apps.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Business websites (single & multi-page)</li>
+                            <li><span class="card-bullet"></span>E-commerce websites & catalogues</li>
+                            <li><span class="card-bullet"></span>Custom web apps, portals & admin panels</li>
+                            <li><span class="card-bullet"></span>Landing pages for campaigns & lead capture</li>
+                        </ul>
+                    </article>
+
+                    <!-- Core IT – Automation, CRM, Integrations -->
+                    <article class="card">
+                        <h3 class="card-title">Automation, CRM & Integrations</h3>
+                        <p class="card-sub">
+                            Make your processes smarter with automation and simple CRM flows.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Lead & customer management (CRM)</li>
+                            <li><span class="card-bullet"></span>Follow-up & reminder workflows</li>
+                            <li><span class="card-bullet"></span>WhatsApp-based enquiry & notification flows</li>
+                            <li><span class="card-bullet"></span>Basic dashboards & reporting for owners</li>
+                        </ul>
+                    </article>
+
+                    <!-- Core IT – Cloud & Technical Support -->
+                    <article class="card">
+                        <h3 class="card-title">Cloud, Hosting & Tech Support</h3>
+                        <p class="card-sub">
+                            Reliable infrastructure and support so your IT projects stay healthy.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Domain, hosting & DNS setup</li>
+                            <li><span class="card-bullet"></span>Deployment & environment configuration</li>
+                            <li><span class="card-bullet"></span>Regular backup & basic security hardening</li>
+                            <li><span class="card-bullet"></span>Ongoing maintenance & AMC options</li>
+                        </ul>
+                    </article>
+
+                    <!-- Revenue – Video Editing & Content -->
+                    <article class="card">
+                        <h3 class="card-title">Video Editing & Content</h3>
+                        <p class="card-sub">
+                            Content services that support your IT platforms and help you market better.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>YouTube video editing (long-form)</li>
+                            <li><span class="card-bullet"></span>Reels & Shorts (vertical edits)</li>
+                            <li><span class="card-bullet"></span>Product & promo videos for launches</li>
+                            <li><span class="card-bullet"></span>Logo intros / outros & basic motion graphics</li>
+                        </ul>
+                    </article>
+
+                    <!-- Revenue – Branding & Digital Identity -->
+                    <article class="card">
+                        <h3 class="card-title">Branding & Digital Identity</h3>
+                        <p class="card-sub">
+                            Visual layer on top of your IT systems – so everything looks as good as it works.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Logo refinement & basic brand kit</li>
+                            <li><span class="card-bullet"></span>Digital visiting cards with QR</li>
+                            <li><span class="card-bullet"></span>Social media post packs & ads creatives</li>
+                            <li><span class="card-bullet"></span>Brochures, flyers & launch posters</li>
+                        </ul>
+                    </article>
+
+                    <!-- Revenue – POS & Business Tools -->
+                    <article class="card">
+                        <h3 class="card-title">POS & Business Tools</h3>
+                        <p class="card-sub">
+                            Practical tools that help your day-to-day operations run smoothly.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>POS / billing software setup & branding</li>
+                            <li><span class="card-bullet"></span>Inventory & GST-friendly reports</li>
+                            <li><span class="card-bullet"></span>Backup, restore & data migration</li>
+                            <li><span class="card-bullet"></span>Installation, configuration & staff training</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO / CASE STUDIES -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="section-label">Portfolio</div>
+                <div class="section-heading-row">
+                    <h2 class="section-heading">Selected IT projects & case studies</h2>
+                    <p class="section-tagline">
+                        A quick look at how we combine web, automation and supporting services for real businesses.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Case Study 1 -->
+                    <article class="card">
+                        <h3 class="card-title">Retail billing + website presence</h3>
+                        <p class="card-sub">
+                            Implemented POS, stock tracking and a simple website for a local retail store to bring
+                            both offline and online presence together.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>POS setup with backup & GST reports</li>
+                            <li><span class="card-bullet"></span>Single-page business website with contact form</li>
+                            <li><span class="card-bullet"></span>Basic WhatsApp enquiry integration</li>
+                            <li><span class="card-bullet"></span>Owner-friendly training & documentation</li>
+                        </ul>
+                    </article>
+
+                    <!-- Case Study 2 -->
+                    <article class="card">
+                        <h3 class="card-title">Service business lead system</h3>
+                        <p class="card-sub">
+                            Built a lightweight CRM-style flow to track service enquiries, follow-ups and status.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Landing page with clear service presentation</li>
+                            <li><span class="card-bullet"></span>Lead capture form feeding into simple CRM</li>
+                            <li><span class="card-bullet"></span>WhatsApp notifications for new enquiries</li>
+                            <li><span class="card-bullet"></span>Follow-up reminders & basic reporting</li>
+                        </ul>
+                    </article>
+
+                    <!-- Case Study 3 -->
+                    <article class="card">
+                        <h3 class="card-title">Launch-ready brand kit & promos</h3>
+                        <p class="card-sub">
+                            For a new business, we supported the IT stack with branded visuals and launch videos.
+                        </p>
+                        <ul class="card-list">
+                            <li><span class="card-bullet"></span>Business website with clear services layout</li>
+                            <li><span class="card-bullet"></span>Logo, social media kit & digital visiting card</li>
+                            <li><span class="card-bullet"></span>Promo video + Reels for launch campaign</li>
+                            <li><span class="card-bullet"></span>Ongoing updates based on early feedback</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- LAUNCH DETAILS -->
+        <section id="launch">
+            <div class="container">
+                <div class="section-label">Launch</div>
+                <div class="section-heading-row">
+                    <h2 class="section-heading">Grand digital launch – 12.12.2025</h2>
+                    <p class="section-tagline">
+                        A focused walkthrough of our IT services stack, plus supporting creative & POS offerings.
+                    </p>
+                </div>
+
+                <div class="launch-layout">
+                    <div>
+                        <div class="launch-badge">
+                            <span>★</span> 12 December 2025 • 12:12 PM (Online)
+                        </div>
+                        <p class="launch-note">
+                            We’re launching Sahasra Infotech Solutions with a live online event that showcases how
+                            we approach <strong>IT projects, automation and digital enablement</strong> for businesses.
+                        </p>
+                        <ul class="launch-list">
+                            <li><span>→</span> Walkthrough of website & web app delivery process</li>
+                            <li><span>→</span> Demo of automation, CRM & WhatsApp-based flows</li>
+                            <li><span>→</span> Overview of video, branding and POS as support services</li>
+                            <li><span>→</span> Q&amp;A on partnering with us for long-term IT work</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="timer-row" id="launch-timer">
+                            <!-- JS will fill countdown here -->
+                        </div>
+
+                        <div class="launch-stream-card" style="margin-top: 1rem;">
+                            <div class="launch-stream-chip">Streaming</div>
+                            <div style="margin-bottom: 0.5rem;">
+                                Live from <strong>Siddipet</strong> – link will be shared via WhatsApp broadcast and social channels.
+                            </div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">
+                                To receive launch updates and streaming link, send us a
+                                <strong>“Hi” on WhatsApp</strong> at <strong>+91 77027 43143</strong> and save our number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-label">Contact</div>
+                <div class="section-heading-row">
+                    <h2 class="section-heading">Share your IT requirement</h2>
+                    <p class="section-tagline">
+                        Tell us about your project or idea. We’ll respond with a simple, practical next step.
+                    </p>
+                </div>
+
+                <div class="contact-inner">
+                    <div class="contact-grid">
+                        <div>
+                            <form id="contact-form">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input id="name" type="text" placeholder="Your full name" required />
+                                </div>
+                                <div>
+                                    <label for="phone">Mobile / WhatsApp</label>
+                                    <input id="phone" type="tel" placeholder="+91-XXXXXXXXXX" required />
+                                </div>
+                                <div>
+                                    <label for="business">Business / Organization</label>
+                                    <input id="business" type="text" placeholder="Company / Brand name" />
+                                </div>
+                                <div>
+                                    <label for="service">Primary requirement</label>
+                                    <select id="service">
+                                        <option value="">Select one</option>
+                                        <option>Website / Web App</option>
+                                        <option>E-commerce setup</option>
+                                        <option>Automation / CRM</option>
+                                        <option>Video editing / promos</option>
+                                        <option>Branding / digital identity</option>
+                                        <option>POS / billing solution</option>
+                                        <option>Other IT requirement</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="message">Project details</label>
+                                    <textarea id="message" placeholder="Share a short description of your project, timeline and any reference links…"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">
+                                    Submit Enquiry
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="contact-meta">
+                            <p>
+                                <strong>Sahasra Infotech Solutions</strong><br />
+                                Hyderabad Road, Siddipet, Telangana
+                            </p>
+
+                            <ul class="contact-list">
+                                <li>
+                                    <span class="contact-label">Email:</span>
+                                    <a href="mailto:sahasrainfotechsolutions@gmail.com">
+                                        sahasrainfotechsolutions@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="contact-label">Phone:</span>
+                                    <a href="tel:+917702743143">+91 77027 43143</a>
+                                </li>
+                                <li>
+                                    <span class="contact-label">WhatsApp:</span>
+                                    <a href="https://wa.me/917702743143" target="_blank" rel="noopener">
+                                        +91 77027 43143
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="whatsapp-contact-btn">
+                                <a
+                                    class="btn-whatsapp"
+                                    href="https://wa.me/917702743143?text=Hi%20Sahasra%20Infotech%20Solutions%2C%20I%20am%20interested%20in%20your%20services."
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    💬 Chat on WhatsApp
+                                </a>
+                            </div>
+
+                            <p class="whatsapp-note">
+                                Save our number and send “Hi” on WhatsApp to receive project updates,
+                                launch information and service offers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-row">
+            <div>
+                © <span id="year"></span> Sahasra Infotech Solutions. All rights reserved.
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Back to top</a>
+                <a href="#services">IT services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-links">
+                <!-- Replace with real links -->
+                <a href="https://wa.me/917702743143" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://www.youtube.com/channel/UCTrpCpQ_5zdzI4417DPgeAg" target="_blank" rel="noopener">YouTube</a>
+                <a href="https://www.instagram.com/sahasrainfotechsolutions/" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/profile.php?id=61584594786944" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Launch countdown (target: 12 Dec 2025, 12:12 Asia/Kolkata)
+    const launchTarget = new Date('2025-12-12T12:12:00+05:30').getTime();
+    const timerContainer = document.getElementById('launch-timer');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = launchTarget - now;
+
+        if (!timerContainer) return;
+
+        if (diff <= 0) {
+            timerContainer.innerHTML = `
+                <div class="timer-pill">
+                    <div class="timer-value">Live</div>
+                    <div class="timer-label">Event Started</div>
+                </div>`;
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+        timerContainer.innerHTML = `
+            <div class="timer-pill">
+                <div class="timer-value">${days}</div>
+                <div class="timer-label">Days</div>
+            </div>
+            <div class="timer-pill">
+                <div class="timer-value">${hours}</div>
+                <div class="timer-label">Hours</div>
+            </div>
+            <div class="timer-pill">
+                <div class="timer-value">${minutes}</div>
+                <div class="timer-label">Minutes</div>
+            </div>
+        `;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // update every 60 seconds
+
+    // Contact form -> WhatsApp
+    const contactForm = document.getElementById('contact-form');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const business = document.getElementById('business').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            const text = `
+New enquiry from website:
+
+Name: ${name}
+Mobile / WhatsApp: ${phone}
+Business / Organization: ${business || '-'}
+Primary requirement: ${service || '-'}
+Details: ${message || '-'}
+            `;
+
+            const encoded = encodeURIComponent(text);
+            const waUrl = `https://wa.me/917702743143?text=${encoded}`;
+
+            window.open(waUrl, '_blank'); // opens WhatsApp (app or Web)
+        });
+    }
+
+    // Scroll reveal for sections
+const revealEls = document.querySelectorAll('.reveal');
+
+if (revealEls.length) {
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // animate only once
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    revealEls.forEach(el => revealObserver.observe(el));
+}
+
+</script>
+</body>
+</html>
