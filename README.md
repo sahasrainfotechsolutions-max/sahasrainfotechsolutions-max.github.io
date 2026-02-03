@@ -15,7 +15,7 @@ https://sahasrainfotechsolutions-max.github.io/
 
 ### 📞 Contact Us
 📱 +91 77027 43143  
-📧 sahasrainfotechsolutions@gmail.com  
+📧 info@sahasrainfotechsolutions.in  
 📍 Hyderabad Road, Siddipet
 
 ---
