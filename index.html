@@ -18,7 +18,7 @@
     <title>Sahasra Infotech Solutions | Intelligent Solutions For Smarter Tomorrow</title>
 
     <!-- Basic SEO -->
-    <meta name="description" content="Sahasra Infotech Solutions is an IT services company delivering websites, web apps, automation, CRM, POS systems, video content and digital solutions for modern businesses." />
+    <meta name="description" content="Sahasra Infotech Solutions is a DPIIT Recognized Startup offering websites, web apps, CRM, automation, POS systems and digital IT solutions across India." />
     <meta name="keywords" content="Sahasra Infotech Solutions, IT services, website development, web apps, CRM, automation, POS software, billing software, video editing, branding, billing software India, GST billing software desktop,
 retail billing software offline, billing software Telangana, Siddipet" />
     <meta name="author" content="Sahasra Infotech Solutions" />
@@ -59,7 +59,7 @@ retail billing software offline, billing software Telangana, Siddipet" />
   "url": "https://sahasrainfotechsolutions-max.github.io/",
   "logo": "https://sahasrainfotechsolutions-max.github.io/logo-full.png",
   "image": "https://sahasrainfotechsolutions-max.github.io/logo-full.png",
-  "description": "Sahasra Infotech Solutions is an IT services company based in Siddipet, Telangana, providing websites, web apps, automation, CRM, POS systems, video editing and branding services.",
+ "description": "Sahasra Infotech Solutions is a DPIIT Recognized Startup under Startup India, providing websites, web apps, automation, CRM, POS systems and digital solutions.",
   "telephone": "+917702743143",
   "email": "sahasrainfotechsolutions@gmail.com",
   "address": {
@@ -214,7 +214,9 @@ retail billing software offline, billing software Telangana, Siddipet" />
             font-size: 0.68rem;
             color: var(--text-muted);
         }
-
+.btn-ghost {
+    cursor: pointer;
+}
         nav {
             flex: 1;
         }
@@ -1188,11 +1190,17 @@ retail billing software offline, billing software Telangana, Siddipet" />
         <section class="hero">
             <div class="container hero-grid">
                 <div class="reveal">
-                    <div class="pill">
-                        <span class="pill-dot"></span>
-                        <span class="pill-strong">Full-stack IT partner</span>
-                        <span>From idea to deployment &amp; support</span>
-                    </div>
+                   <div class="pill">
+    <span class="pill-dot"></span>
+    <span class="pill-strong">Full-stack IT partner</span>
+    <span>From idea to deployment & support</span>
+</div>
+
+<div class="pill">
+    <span class="pill-dot"></span>
+    <span class="pill-strong">DPIIT Recognized Startup</span>
+    <span>Government of India Certified</span>
+</div>
 
                     <h1 class="hero-title">
                         <span class="hero-highlight">Intelligent Solutions</span><br />
@@ -1205,6 +1213,9 @@ retail billing software offline, billing software Telangana, Siddipet" />
                         We also develop our own billing software products along with creative, video and POS solutions
                         that help your business run and grow.
                     </p>
+                    <p style="font-size:13px; color:#9ca3af;">
+✔ Govt. Recognized Startup • ✔ Trusted IT Solutions • ✔ Serving Across India
+</p>
 
                     <div class="hero-cta-row">
                         <a href="#contact" class="btn-primary">
@@ -1213,7 +1224,14 @@ retail billing software offline, billing software Telangana, Siddipet" />
                         <a href="#services" class="btn-ghost">
                             View Full Service Stack
                         </a>
+                    <a href="#" class="btn-ghost" onclick="openCertificate()">
+    View DPIIT Certificate
+</a>
+                   
                     </div>
+                        <p style="font-size:12px; color:#9ca3af;">
+Verified by Government of India under Startup India Initiative
+</p>
 
                     <div class="hero-meta">
                         <span><span class="badge-dot"></span> <strong>Project-first mindset</strong> – clear scope, timelines &amp; delivery</span>
@@ -1260,7 +1278,7 @@ retail billing software offline, billing software Telangana, Siddipet" />
                 contact us via <strong>WhatsApp or Email</strong>.
             </div>
 
-            <div class="hero-card-badge">Serving Businesses</div>
+           <div class="hero-card-badge">DPIIT Recognized Startup 🇮🇳</div>
         </div>
 
     </div>
@@ -1278,10 +1296,18 @@ retail billing software offline, billing software Telangana, Siddipet" />
                     <p class="section-tagline">
                         Core business is IT services and projects. Creative, video and POS solutions support your growth.
                     </p>
+                    <p>
+    We are proud to be a <strong>DPIIT Recognized Startup under Startup India (Govt. of India)</strong>,
+    validating our innovation and commitment to building scalable IT solutions for businesses.
+</p>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-text reveal">
+                        <p>
+    We are proud to be a <strong>DPIIT Recognized Startup under Startup India (Govt. of India)</strong>,
+    validating our innovation and commitment to building scalable IT solutions for businesses.
+</p>
                         <p>
                             Sahasra Infotech Solutions is an IT services company based in Siddipet, helping
                             businesses build <strong>websites, custom web applications, CRM and automation workflows</strong>.
@@ -1852,7 +1878,60 @@ Details: ${message || '-'}
 
         revealEls.forEach(el => revealObserver.observe(el));
     }
+    function openCertificate() {
+    document.getElementById("certificateModal").style.display = "flex";
+}
+
+function closeCertificate() {
+    document.getElementById("certificateModal").style.display = "none";
+}
+
+// Close when clicking outside image
+window.onclick = function(event) {
+    const modal = document.getElementById("certificateModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
+    <!-- DPIIT Certificate Modal -->
+<div id="certificateModal" style="
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.85);
+    justify-content:center;
+    align-items:center;
+">
+
+    <div style="position:relative; max-width:90%; max-height:90%;">
+        
+        <!-- CLOSE BUTTON -->
+        <span onclick="closeCertificate()" style="
+            position:absolute;
+            top:-10px;
+            right:-10px;
+            background:#ef4444;
+            color:white;
+            border-radius:50%;
+            padding:6px 10px;
+            cursor:pointer;
+            font-weight:bold;
+        ">✕</span>
+
+        <!-- CERTIFICATE IMAGE -->
+        <img src="images/dpiit-certificate.jpg" 
+             alt="DPIIT Certificate"
+             style="max-width:100%; max-height:85vh; border-radius:10px;" />
+    </div>
+    <div style="color:white; text-align:center; margin-bottom:10px; font-size:14px;">
+DPIIT Recognition Certificate – Govt. of India
+</div>
+</div>
 </body>
 </html>
 
