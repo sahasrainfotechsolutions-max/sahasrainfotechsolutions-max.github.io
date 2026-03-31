@@ -752,6 +752,43 @@ retail billing software offline, billing software Telangana, Siddipet" />
             box-shadow: 0 18px 35px rgba(15, 23, 42, 0.8);
             font-size: 0.88rem;
         }
+        .card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect layer */
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: radial-gradient(circle, rgba(34, 197, 94, 0.35), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+/* Ensure content stays above */
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    border-color: rgba(34, 197, 94, 0.9);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.9),
+        0 0 50px rgba(34, 197, 94, 0.5);
+}
+
+/* Glow visible on hover */
+.card:hover::before {
+    opacity: 1;
+}
 
         .card-title {
             font-size: 0.98rem;
@@ -934,7 +971,9 @@ retail billing software offline, billing software Telangana, Siddipet" />
         select:focus,
         textarea:focus {
             border-color: rgba(56, 189, 248, 0.9);
-            box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.5);
+           box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(34, 197, 94, 0.5);
         }
 
         textarea {
