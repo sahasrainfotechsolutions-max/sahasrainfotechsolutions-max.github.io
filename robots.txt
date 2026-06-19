@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sahasrainfotechsolutions-max.github.io/sitemap.xml
+Sitemap: https://sahasrainfotechsolutions.in/sitemap.xml
